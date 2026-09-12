@@ -2,7 +2,7 @@
 // const numbers = [10, 5, 8, 20, 15];
 // output: 15
 
-const numbers = [5, 5, 8, 24, 25];
+/* const numbers = [5, 5, 8, 24, 25];
 
 let largest = -Infinity;
 let secLargets = -Infinity;
@@ -16,4 +16,26 @@ for(const num of numbers) {
     }
 }
 
-console.log(secLargets)
+console.log(secLargets);   
+*/
+
+
+// 2. একটি string দেওয়া আছে। তোমাকে বের করতে হবে কোন character কতবার এসেছে।
+function characterCount(str) {
+    const result = {};
+
+    str = str.toLowerCase();
+
+    for(let char of str) {
+        if(result[char]) {
+            result[char] ++
+        } else {
+            result[char] = 1
+        }
+    }
+
+    return result
+}
+
+
+console.log(characterCount("JavaScriptPhytonppppp"));

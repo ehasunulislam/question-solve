@@ -21,21 +21,42 @@ console.log(secLargets);
 
 
 // 2. একটি string দেওয়া আছে। তোমাকে বের করতে হবে কোন character কতবার এসেছে।
-function characterCount(str) {
-    const result = {};
+// function characterCount(str) {
+//     const result = {};
 
-    str = str.toLowerCase();
+//     str = str.toLowerCase();
 
-    for(let char of str) {
-        if(result[char]) {
-            result[char] ++
-        } else {
-            result[char] = 1
+//     for(let char of str) {
+//         if(result[char]) {
+//             result[char] ++
+//         } else {
+//             result[char] = 1
+//         }
+//     }
+
+//     return result
+// }
+
+
+// console.log(characterCount("JavaScriptPhytonppppp"));
+
+
+// একটি string দেওয়া থাকবে। তোমাকে প্রথম এমন character বের করতে হবে, যেটি পুরো string-এ মাত্র একবার এসেছে। ( First Unique Character in a String )
+function firstCharacter(fc) {
+    const count = {};
+
+    for(let char of fc) {
+        count[char] = (count[char] || 0) + 1
+    }
+
+    for(let i = 0; i < fc.length; i++) {
+        if(count[fc[i]] === 1) {
+            return fc[i];
         }
     }
 
-    return result
+    return null
 }
 
 
-console.log(characterCount("JavaScriptPhytonppppp"));
+console.log(firstCharacter("orko okro Ehasun orko"))

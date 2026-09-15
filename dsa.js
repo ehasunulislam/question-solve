@@ -41,22 +41,52 @@ console.log(secLargets);
 // console.log(characterCount("JavaScriptPhytonppppp"));
 
 
-// একটি string দেওয়া থাকবে। তোমাকে প্রথম এমন character বের করতে হবে, যেটি পুরো string-এ মাত্র একবার এসেছে। ( First Unique Character in a String )
-function firstCharacter(fc) {
-    const count = {};
+// 3. একটি string দেওয়া থাকবে। তোমাকে প্রথম এমন character বের করতে হবে, যেটি পুরো string-এ মাত্র একবার এসেছে। ( First Unique Character in a String )
+// function firstCharacter(fc) {
+//     const count = {};
 
-    for(let char of fc) {
-        count[char] = (count[char] || 0) + 1
-    }
+//     for(let char of fc) {
+//         count[char] = (count[char] || 0) + 1
+//     }
 
-    for(let i = 0; i < fc.length; i++) {
-        if(count[fc[i]] === 1) {
-            return fc[i];
-        }
-    }
+//     for(let i = 0; i < fc.length; i++) {
+//         if(count[fc[i]] === 1) {
+//             return fc[i];
+//         }
+//     }
 
-    return null
-}
+//     return null
+// }
 
 
-console.log(firstCharacter("orko okro Ehasun orko"))
+// console.log(firstCharacter("orko okro Ehasun orko"))
+
+
+// 4.  দুটি string দেওয়া থাকবে। Check করতে হবে তারা Anagram কিনা। Anagram মানে character একই হবে, শুধু order আলাদা হতে পারে।
+
+// function isAnagram(str1, str2) {
+//     str1 = str1.toLowerCase();
+//     str2 = str2.toLowerCase();
+
+//     if(str1.length !== str2.length) {
+//         return false
+//     }
+
+//     const result = {};
+
+//     for(let char of str1){
+//         result[char] = (result[char] || 0) + 1;
+//     }
+
+//     for(let char of str2) {
+//         if(!result[char]) {
+//             return false
+//         }
+
+//         result[char]--
+//     }
+
+//     return true
+// }
+
+// console.log(isAnagram("orko", "OkRo"))

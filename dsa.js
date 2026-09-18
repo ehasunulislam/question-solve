@@ -122,3 +122,13 @@ function modeZero(nums) {
 
 console.log(modeZero([0, 2, 3, 0, 5]))
 */
+
+
+
+// 6. একটি sorted array দেওয়া থাকবে। তোমাকে duplicate value গুলো remove করে unique values রেখে দিতে হবে।
+
+function removeDuplicateNumbers(nums) {
+    
+}
+
+console.log(removeDuplicateNumbers([1, 1, 2, 2, 3, 4, 4, 5]));

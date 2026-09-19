@@ -128,7 +128,17 @@ console.log(modeZero([0, 2, 3, 0, 5]))
 // 6. একটি sorted array দেওয়া থাকবে। তোমাকে duplicate value গুলো remove করে unique values রেখে দিতে হবে।
 
 function removeDuplicateNumbers(nums) {
-    
+    let count = 0;
+
+    for(let i = 1; i < nums.length; i++) {
+       if( nums[count] !== nums[i]) {
+            count ++
+            nums[count] = nums[i]
+       }
+    }
+
+    // return count + 1;
+    return nums.slice(0, count + 1);
 }
 
 console.log(removeDuplicateNumbers([1, 1, 2, 2, 3, 4, 4, 5]));

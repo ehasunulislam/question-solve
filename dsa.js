@@ -148,7 +148,7 @@ console.log(removeDuplicateNumbers([1, 1, 2, 2, 3, 4, 4, 5]));
 
 // 7. একটি array দেওয়া থাকবে যেখানে প্রতিটি element একটি দিনের stock price। তোমাকে একবার buy এবং একবার sell করে সর্বোচ্চ profit বের করতে হবে।
 
-const prices = [7, 1, 5, 3, 6, 4];
+/*
 
 function proft(todayRate) {
     let min_price = todayRate[0];
@@ -171,4 +171,34 @@ function proft(todayRate) {
     return maxDiffrence
 }
 
-console.log(proft([7, 1, 5, 3, 6, 4, 8, 20]))
+console.log(proft([7, 1, 5, 3, 6, 4, 8, 20]));
+
+*/
+
+
+
+// 8. একটি array দেওয়া থাকবে। Check করতে হবে array-এর মধ্যে কোনো duplicate value আছে কিনা।
+// output: true / false
+
+/*
+
+function dplicateNumber(nums) {
+    let seen = {};
+
+    for(let i = 0; i < nums.length; i++) {
+        let currentNumber = nums[i];
+
+        if(seen[currentNumber]) {
+            return true
+        } 
+
+        seen[currentNumber] = true
+    }
+
+    return false
+}
+
+console.log(dplicateNumber([1, 3, 5, 3]))
+
+*/
+

@@ -202,5 +202,32 @@ console.log(dplicateNumber([1, 3, 5, 3]))
 
 */
 
-// 9. question searching 
-11
+// 9. Longest Consecutive Sequence
+// একটি unsorted array দেওয়া থাকবে। তোমাকে সবচেয়ে লম্বা consecutive numbers-এর sequence-এর length বের করতে হবে।
+
+/* 
+function longestConsecutive (nums) {
+    const notDuplicatenumber = new Set(nums);
+    let longsetStrek = 0;
+    
+    for(let num of notDuplicatenumber) {
+        if(!notDuplicatenumber.has(num - 1)) {
+            let currentNum = num;
+            let currentStrek = 1;
+
+
+            while(notDuplicatenumber.has(currentNum + 1)) {
+                currentNum += 1;
+                currentStrek += 1
+            }
+
+            longsetStrek = Math.max(longsetStrek, currentStrek)
+        }
+    }
+
+    return longsetStrek
+}
+
+
+console.log(longestConsecutive([500, 2500, 501, 502, 500000, 500, 503]))
+*/

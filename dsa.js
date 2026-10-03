@@ -235,3 +235,23 @@ console.log(longestConsecutive([500, 2500, 501, 502, 500000, 500, 503]))
 
 // 10. একটি array দেওয়া থাকবে। 
 // তোমাকে এমন একটি নতুন array return করতে হবে যেখানে প্রতিটি position-এ থাকবে নিজের element ছাড়া বাকি সব element-এর product
+
+function productExpectSelf(nums) {
+    const length = nums.length;
+    const result = new Array(length);
+
+    result[0] = 1;
+    for(let i = 1; i < length; i++) {
+        result[i] = result[i - 1 ] * nums[i - 1]
+    }
+
+    let rightProduct = 1;
+    for(let i = length - 1; i >= 0; i--) {
+        result[i] = result[i] * rightProduct;
+        rightProduct = rightProduct * nums[i]
+    }
+
+    return result
+}
+
+console.log(productExpectSelf([1, 2, 3, 4]));

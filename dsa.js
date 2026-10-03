@@ -231,3 +231,7 @@ function longestConsecutive (nums) {
 
 console.log(longestConsecutive([500, 2500, 501, 502, 500000, 500, 503]))
 */
+
+
+// 10. একটি array দেওয়া থাকবে। 
+// তোমাকে এমন একটি নতুন array return করতে হবে যেখানে প্রতিটি position-এ থাকবে নিজের element ছাড়া বাকি সব element-এর product

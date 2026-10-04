@@ -235,7 +235,7 @@ console.log(longestConsecutive([500, 2500, 501, 502, 500000, 500, 503]))
 
 // 10. একটি array দেওয়া থাকবে। 
 // তোমাকে এমন একটি নতুন array return করতে হবে যেখানে প্রতিটি position-এ থাকবে নিজের element ছাড়া বাকি সব element-এর product
-
+/*
 function productExpectSelf(nums) {
     const length = nums.length;
     const result = new Array(length);
@@ -255,3 +255,42 @@ function productExpectSelf(nums) {
 }
 
 console.log(productExpectSelf([1, 2, 3, 4]));
+*/
+
+
+
+// 11. একটি string দেওয়া থাকবে, যেখানে শুধু এই character গুলো থাকবে:
+// ( ) { } [ ]
+// তোমাকে check করতে হবে parentheses/brackets valid কিনা।
+
+function isValid(s) {
+    const braketMap = {
+        "(" : ")",
+        "{" : "}", 
+        "[" : "]"
+    }
+
+    const stack = [];
+
+    for(let char of s) {
+        if(braketMap[char] !== undefined) {
+            stack.push(char);
+        } else {
+            const topElement = stack.length > 0 ? stack.pop() : "#";
+
+            if(braketMap[topElement] !== char) {
+                return false
+            }
+        }
+    }
+
+    return stack.length === 0;
+}
+
+
+
+console.log(isValid("()"));       
+console.log(isValid("()[]{}"));   
+console.log(isValid("(]"));      
+console.log(isValid("{[]}"));    
+console.log(isValid("([)]"));
